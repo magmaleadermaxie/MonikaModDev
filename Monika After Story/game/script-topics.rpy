@@ -17598,9 +17598,11 @@ label monika_utterson:
     m 2lkd "It kind of still is seen that way..."
     m 3eka "But great progress has been made!"
     m 3hsb "I'm just glad the world is more accepting of different kinds of love."
+    if persistent.gender != "M":
+        m "Just know that I'll always accept and love you for who you are [mas_get_player_nickname(exclude_names="darling")]."
     m 5ekbfa "Especially since I live in a world where I can love you, [mas_get_player_nickname()]!"
     m 5hsbfb "Ehehe~"
-    return
+    return "love"
 
 init 5 python:
     addEvent(
